@@ -24,6 +24,23 @@
             }
         }
     </script>
+    <!--email-->
+    <script>
+      function getVal()
+      {
+          var e = document.getElementById("emo");
+          var strUser = e.options[e.selectedIndex].value;
+          return strUser;
+      }
+  
+      function addEmoji()
+      {
+  
+          var val = " " + getVal();
+          document.getElementById('fbody').value += val;
+  
+      }
+  </script>
     <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
     <header>
@@ -43,7 +60,7 @@
     </header>
 
     <section id="aboutMe">
-        <h1>About Me</h1>
+        <h1>Aboutvdfvdfvvd Me</h1>
         <p align="center"> Hi my name is Itzhak Finkelstein, I'm 28 years old originally from Petah Tikva. 
             3rd year student at the Information Systems Engeneering department in Ben Gurion Universiry.
             My hobbies includes doing sport activities such as Tennis and Football, cooking and woodwork.
@@ -113,7 +130,7 @@
             <input type="text"><br>
             Comment:<br>
             <input type="text" size="50"><br><br>
-            <input type="submit" value="Send" onclick="add()">
+            <input type="submit" value="Send" onclick="add()" onclick="getVal">
             <input type="reset" value="Reset">
         </form>
     </footer>
