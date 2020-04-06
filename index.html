@@ -1,193 +1,122 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel="stylesheet" type="text/css" href="style.css" />
+    <title> My Web Page </title>
+    <link href="style1.css" rel="stylesheet">
 </head>
+
+
 <body>
-<div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
-</div>
-		  
-<section id="about" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
-<br/>
-<br/>
-</section>
+    <div id="fb-root"></div>
+    <!-- sticky menu -->
+    <script>
+        window.onscroll = function () { myFunction() };
 
-<section id="photos" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
-<br/>
-<br/>
-</section>
+        var header = document.getElementById("header");
+        var sticky = header.offsetTop;
 
-<section id="playlist" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
-<br/>
-<br/>
-<br/>
-</section>
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                header.classList.add("sticky")
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="https://tzachf.github.io/wdeEx1/index.html"><img class="logo" src="logo.png"></a></li>
+                <li><a href="https://tzachf.github.io/wdeEx1/index.html#aboutMe">About Me</a></li>
+                <li><a href="https://tzachf.github.io/wdeEx1/index.html#photos">My Photos</a>
+                <li><a href="https://tzachf.github.io/wdeEx1/index.html#playlist">My Playlist</a></li>
+                <li><a href="https://tzachf.github.io/wdeEx1/index.html#like">Like</a></li>
+                <li><a href="https://tzachf.github.io/wdeEx1/index.html#qrCode">QR code</a></li>
+                <li><a href="https://tzachf.github.io/wdeEx1/index.html#qa">Q&A</a></li>
+                <li><a href="https://tzachf.github.io/wdeEx1/index.html#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+        <h1></h1>
+    </header>
 
-<section id="like" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
-</section>
+    <section id="aboutMe">
+        <h1>About Me</h1>
+        <p align="center"> Hi my name is Itzhak Finkelstein, I'm 28 years old originally from Petah Tikva. 
+            3rd year student at the Information Systems Engeneering department in Ben Gurion Universiry.
+            My hobbies includes doing sport activities such as Tennis and Football, cooking and woodwork.
+            My expectations from Web Development Course is to add to my CV big words such as JavaScript HTML5 and more.
+            </p>
+    </section>
+    <section id="photos" align="center">
+        <h1>My Photos</h1>
+        <div>These are all photos from my last trip to Vietnam and Cambodia</div>
+        <div class="photosRow">
+            <div class="photosCol">
+                <img src="IMG_7845.JPG" style="width: 200px;">
+                <div class="desc">Hoi An, Vietnam</div>
+            </div>
+            <div class="photosCol">
+                <img src="IMG_7375.JPG" style="width: 200px;">
+                <div class="desc">Ha Long, Vietnam</div>
+            </div>
+            <div class="photosCol">
+                <img src="IMG_7849.JPG" style="width: 200px;">
+                <div class="desc">Kampot, Cambodia</div>
+            </div>
+            <div class="photosCol">
+                <img src="IMG_7995.JPG" style="width: 200px;">
+                <div class="desc">Koh Rong, Cambodia</div>
+            </div>
+        </div>
+    </section>
+    <section id="playlist" align="center">
+        <h1>My Playlist</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vq7ZT53Gj4A" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>+
+    </section>
+    <section id="like" align="center">
+        <h1>Like</h1>
+        <p>Come support my team Arsenal in Facebook</p>
+        <div class="fb-like" data-href="https://www.facebook.com/Arsenal/" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+    </section>
+    <section id="qrCode" align="center">
+        <h1> Scan My QR Code </h1>
+        <img class="QRCode" src="qrCode.png">
+    </section>
+    <section id="qa">
+        <h1> Q&A </h1>
+        <table style="width:100%">
+            <tr>
+                <th>Question</th>
+                <th>Answer</th>
+            </tr>
+            <tr>
+                <td>1. The Three main differences between web1, web2 and web3</td>
+                <td>-----</td>
+            </tr>
+            <tr>
+                <td>2.Medicines side effects Use Case</td>
+                <td>------</td>
+            </tr>
+        </table>
+    </section>
 
-<section id="qrcoder" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-scan my code
-<br/>
-<br/>
-<br/>
-</section>
-
-<section id="spa" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
-<br/>
-<br/>
-<br/>
-</section>
-
-<section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
-<br/>
-<br/>
-</section>
-
-
-<script type="text/javascript">
-$(function(){
-  $("#nav a").click(function(e){
-    e.preventDefault();
-    $('html,body').scrollTo(this.hash,this.hash); 
-  });
-});
-</script>
-<script type="text/javascript">
- $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop()>1000)
- });​
- </script>
+    <footer id="contact" align="center">
+        <h1>Contact Me</h1>
+        <form action="mailto:itzhakf@post.bgu.ac.il" method="post" enctype="text/plain">
+            Name:<br>
+            <input type="text"><br>
+            E-mail:<br>
+            <input type="text"><br>
+            Comment:<br>
+            <input type="text" size="50"><br><br>
+            <input type="submit" value="Send" onclick="add()">
+            <input type="reset" value="Reset">
+        </form>
+    </footer>
 </body>
+
 </html>
