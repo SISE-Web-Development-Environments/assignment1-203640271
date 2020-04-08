@@ -28,17 +28,14 @@
     <script>
       function getVal()
       {
-          var e = document.getElementById("emo");
-          var strUser = e.options[e.selectedIndex].value;
+          var selectedEmoji = document.getElementById("emoji");
+          var strUser = selectedEmoji.options[selectedEmoji.selectedIndex].value;
           return strUser;
       }
-  
       function addEmoji()
       {
-  
           var val = " " + getVal();
-          document.getElementById('fbody').value += val;
-  
+          document.getElementById("comment").value += val;
       }
   </script>
     <script async defer crossorigin="anonymous"
@@ -46,21 +43,21 @@
     <header>
         <nav>
             <ul>
-                <li><a href="https://tzachf.github.io/wdeEx1/index.html"><img class="logo" src="logo.png"></a></li>
-                <li><a href="https://tzachf.github.io/wdeEx1/index.html#aboutMe">About Me</a></li>
-                <li><a href="https://tzachf.github.io/wdeEx1/index.html#photos">My Photos</a>
-                <li><a href="https://tzachf.github.io/wdeEx1/index.html#playlist">My Playlist</a></li>
-                <li><a href="https://tzachf.github.io/wdeEx1/index.html#like">Like</a></li>
-                <li><a href="https://tzachf.github.io/wdeEx1/index.html#qrCode">QR code</a></li>
-                <li><a href="https://tzachf.github.io/wdeEx1/index.html#qa">Q&A</a></li>
-                <li><a href="https://tzachf.github.io/wdeEx1/index.html#contact">Contact Me</a></li>
+                <li><a href="https://sise-web-development-environments.github.io/assignment1-203640271/index.html"><img class="logo" src="logo.png"></a></li>
+                <li><a href="https://sise-web-development-environments.github.io/assignment1-203640271/index.html#aboutMe">About Me</a></li>
+                <li><a href="https://sise-web-development-environments.github.io/assignment1-203640271/index.html#photos">My Photos</a>
+                <li><a href="https://sise-web-development-environments.github.io/assignment1-203640271/index.html#playlist">My Playlist</a></li>
+                <li><a href="https://sise-web-development-environments.github.io/assignment1-203640271/index.html#like">Like</a></li>
+                <li><a href="https://sise-web-development-environments.github.io/assignment1-203640271/index.html#qrCode">QR code</a></li>
+                <li><a href="https://sise-web-development-environments.github.io/assignment1-203640271/index.html#qa">Q&A</a></li>
+                <li><a href="https://sise-web-development-environments.github.io/assignment1-203640271/index.html#contact">Contact Me</a></li>
             </ul>
         </nav>
         <h1></h1>
     </header>
 
     <section id="aboutMe">
-        <h1>Aboutvdfvdfvvd Me</h1>
+        <h1>About Me</h1>
         <p align="center"> Hi my name is Itzhak Finkelstein, I'm 28 years old originally from Petah Tikva. 
             3rd year student at the Information Systems Engeneering department in Ben Gurion Universiry.
             My hobbies includes doing sport activities such as Tennis and Football, cooking and woodwork.
@@ -103,32 +100,49 @@
     </section>
     <section id="qa">
         <h1> Q&A </h1>
-        <table style="width:100%">
-            <tr>
-                <th>Question</th>
-                <th>Answer</th>
-            </tr>
-            <tr>
-                <td>1. The Three main differences between web1, web2 and web3</td>
-                <td>-----</td>
-            </tr>
-            <tr>
-                <td>2.Medicines side effects Use Case</td>
-                <td>------</td>
-            </tr>
-        </table>
+        <P>
+            <h1> Q1 : What are the three main differences between web1, web2 and web3</h1>
+            <P> 1. Web 1.0 was mostly read-onlyb </P>
+        </P>
     </section>
-
+    <table style="width:100%">
+        <tr>
+            <th>Question</th>
+            <th>Answer</th>
+        </tr>
+        <tr>
+            <td>1. The Three main differences between web1, web2 and web3</td>
+            <td>
+                <tr>
+                    1. Web 1.0 was mostly read-only 
+                </tr>
+                <tr>
+                    2. Web 1.0 focused mainly on company use
+                </tr>
+            </td>
+        </tr>
+        <tr>
+            <td>2.Medicines side effects Use Case</td>
+            <td>------</td>
+        </tr>
+    </table>
     <footer id="contact" align="center">
         <h1>Contact Me</h1>
-        <form action="mailto:itzhakf@post.bgu.ac.il" method="post" enctype="text/plain">
-            Name:<br>
-            <input type="text"><br>
+        <form id = "mail" action="MAILTO:itzhakf@post.bgu.ac.il" method="GET" enctype="text/plain">
+            Title:<br>
+            <input type="text" name="subject"><br>
             E-mail:<br>
-            <input type="text"><br>
+            <input type="text" name="cc"><br>
             Comment:<br>
-            <input type="text" size="50"><br><br>
-            <input type="submit" value="Send" onclick="add()" onclick="getVal">
+            <textarea id="comment" name = "body" maxlength="128"></textarea>
+            <p>Add an Emoji:</p>
+            <select id="emoji" form="mail" >
+                <option value="&#127758;">&#127758;</option>
+                <option value="&#127796;">&#127796;</option> 
+                <option value="&#128640;">&#128640;</option> 
+            </select>
+            <br><br>
+            <input type="submit" value="Send" onclick="addEmoji()">
             <input type="reset" value="Reset">
         </form>
     </footer>
